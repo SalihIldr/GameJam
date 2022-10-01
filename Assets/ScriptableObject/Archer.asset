@@ -15,4 +15,4 @@ MonoBehaviour:
   _name: "\u041B\u0443\u0447\u043D\u0438\u043A"
   _healt: 100
   _power: 10
-  _dexterity: 30
+  _agility: 30

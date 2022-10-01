@@ -132,8 +132,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 586757680}
+  - component: {fileID: 586757681}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerClassed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,13 +148,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586757679}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 992.3373, y: -114.87741, z: 3362.8706}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &586757681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586757679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c183a8114c816489d459bdcbf76caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _classDefinition: {fileID: 1753131784}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +274,7 @@ GameObject:
   - component: {fileID: 708955685}
   - component: {fileID: 708955684}
   - component: {fileID: 708955683}
+  - component: {fileID: 708955686}
   m_Layer: 5
   m_Name: Swordsman
   m_TagString: Untagged
@@ -370,6 +385,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708955681}
   m_CullTransparentMesh: 1
+--- !u!114 &708955686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708955681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f079828e9e6d1714c85a2eb18c2f0f8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 708955683}
+  _classPlayer: {fileID: 11400000, guid: 41dda006f8153c146bd0d6cf036dd3d0, type: 2}
 --- !u!1 &872107711
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,6 +900,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126626144}
   m_CullTransparentMesh: 1
+--- !u!1 &1753131783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1753131785}
+  - component: {fileID: 1753131784}
+  m_Layer: 0
+  m_Name: ClassDefinition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1753131784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753131783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b82983341ee64d45bca516a378f5723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selectionButtons:
+  - {fileID: 1845679323}
+  - {fileID: 708955686}
+--- !u!4 &1753131785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753131783}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1845679318
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,6 +959,7 @@ GameObject:
   - component: {fileID: 1845679322}
   - component: {fileID: 1845679321}
   - component: {fileID: 1845679320}
+  - component: {fileID: 1845679323}
   m_Layer: 5
   m_Name: Archer
   m_TagString: Untagged
@@ -993,6 +1070,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845679318}
   m_CullTransparentMesh: 1
+--- !u!114 &1845679323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845679318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f079828e9e6d1714c85a2eb18c2f0f8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 1845679320}
+  _classPlayer: {fileID: 11400000, guid: 65951c7f4a6ef5c4ca330bb9f5fc7aba, type: 2}
 --- !u!1 &2033882724
 GameObject:
   m_ObjectHideFlags: 0
