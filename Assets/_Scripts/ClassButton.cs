@@ -8,7 +8,6 @@ public class ClassButton : MonoBehaviour
     [SerializeField] private ClassPlayer _classPlayer;
 
     public event UnityAction<ClassPlayer> SelectedClass;
-    
 
     private void OnEnable()
     {
@@ -22,6 +21,6 @@ public class ClassButton : MonoBehaviour
 
     private void SelectClass()
     {
-        SelectedClass?.Invoke(_classPlayer);        
+        SelectedClass?.Invoke(_classPlayer);
     }
 }

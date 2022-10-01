@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class ClassDefinition : MonoBehaviour
-{   
+{
     [SerializeField] private List<ClassButton> _selectionButtons;
 
     public event UnityAction<ClassPlayer> ClassSelected;
@@ -29,5 +29,6 @@ public class ClassDefinition : MonoBehaviour
     {
         ChoiceOver?.Invoke();
         ClassSelected?.Invoke(classPlayer);
+        PlayerPrefs.SetInt("classSelected", 1);
     }
 }
